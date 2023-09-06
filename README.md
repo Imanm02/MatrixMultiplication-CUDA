@@ -4,7 +4,7 @@ Here's the CUDA matrix multiplication implementation using two approaches: inner
 
 ## Code Walkthrough - CUDA Matrix Multiplication with Inner Product Approach
 
-This notebook demonstrates matrix multiplication using the inner product approach on a CUDA GPU. The code consists of two major parts:
+This part of the code demonstrates matrix multiplication using the inner product approach on a CUDA GPU. The code consists of two major parts:
 
 ### Kernel Function (`innerProductKernel`)
 
@@ -50,7 +50,7 @@ This approach utilizes the parallel processing capabilities of a GPU to accelera
 
 ## Code Walkthrough - CUDA Matrix Multiplication with Outer Product Approach
 
-This notebook demonstrates how to perform matrix multiplication using the outer product approach on a GPU using CUDA. The code consists of two major parts:
+This part of the code demonstrates how to perform matrix multiplication using the outer product approach on a GPU using CUDA. The code consists of two major parts:
 
 ### Kernel Function (`outerProductKernel`)
 
