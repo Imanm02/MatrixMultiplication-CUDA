@@ -2,13 +2,11 @@
 
 Here's the CUDA matrix multiplication implementation using two approaches: inner product and outer product. Matrix multiplication is a fundamental operation in linear algebra and has various applications in computer science and data analysis.
 
-## Code Walkthrough
-
-### CUDA Matrix Multiplication with Inner Product Approach
+## Code Walkthrough - CUDA Matrix Multiplication with Inner Product Approach
 
 This notebook demonstrates matrix multiplication using the inner product approach on a CUDA GPU. The code consists of two major parts:
 
-#### Kernel Function (`innerProductKernel`)
+### Kernel Function (`innerProductKernel`)
 
 The `innerProductKernel` function is the GPU kernel that carries out the matrix multiplication. Each thread calculates one element of the resultant matrix \( C \) by taking the dot product of one row of matrix \( A \) with one column of matrix \( B \).
 
@@ -22,7 +20,7 @@ The `innerProductKernel` function is the GPU kernel that carries out the matrix 
     
     - `sum`: Variable to store the intermediate sum while calculating each element \( C_{ij} \).
   
-#### Test Function (`testInnerProduct`)
+### Test Function (`testInnerProduct`)
 
 The `testInnerProduct` function serves as a testbench. It allocates device memory, copies the input matrices from host to device, launches the kernel, and then copies the resultant matrix back to the host.
 
@@ -38,7 +36,7 @@ The `testInnerProduct` function serves as a testbench. It allocates device memor
     
     - `cudaFree`: Frees the allocated device memory.
 
-#### Compilation and Execution
+### Compilation and Execution
 
 The code is compiled using the NVIDIA CUDA Compiler (`nvcc`) and executed on the GPU. The resultant matrix \( C \) is then printed on the console.
 
@@ -50,11 +48,11 @@ To run this part of the code:
 
 This approach utilizes the parallel processing capabilities of a GPU to accelerate matrix multiplication.
 
-### CUDA Matrix Multiplication with Outer Product Approach
+## Code Walkthrough - CUDA Matrix Multiplication with Outer Product Approach
 
 This notebook demonstrates how to perform matrix multiplication using the outer product approach on a GPU using CUDA. The code consists of two major parts:
 
-#### Kernel Function (`outerProductKernel`)
+### Kernel Function (`outerProductKernel`)
 
 The `outerProductKernel` function is the GPU kernel that performs the matrix multiplication in an outer-product-based approach. In this method, each thread is responsible for calculating an entire row-column multiplication rather than a single element of the resultant matrix \( C \).
 
@@ -68,7 +66,7 @@ The `outerProductKernel` function is the GPU kernel that performs the matrix mul
     
     - `temp_C`: Variable to store the intermediate results of the outer product of two vectors for a specific element in \( C \).
 
-#### Test Function (`testOuterProduct`)
+### Test Function (`testOuterProduct`)
 
 The `testOuterProduct` function serves as a testbench. It allocates device memory, copies the input matrices from host to device, launches the kernel, and then copies the resultant matrix back to the host.
 
@@ -84,7 +82,7 @@ The `testOuterProduct` function serves as a testbench. It allocates device memor
     
     - `cudaFree`: Frees the allocated device memory.
 
-#### Compilation and Execution
+### Compilation and Execution
 
 The code is compiled using the NVIDIA CUDA Compiler (`nvcc`) and executed on the GPU. The resultant matrix \( C \) is then printed on the console.
 
@@ -95,3 +93,7 @@ To run this part of the code:
 3. Run the compiled executable with `!./outer_product_with_testbench`.
 
 This approach leverages the parallel processing power of a GPU to execute the outer-product-based matrix multiplication efficiently.
+
+## Maintainer
+
+- [Iman Mohammadi](https://github.com/Imanm02)
